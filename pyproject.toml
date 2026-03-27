@@ -1,0 +1,8 @@
+[project]
+name = "wordle"
+version = "0.1.0"
+description = "Build your own Wordle game"
+requires-python = ">=3.11"
+dependencies = [
+    "flask",
+]

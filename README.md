@@ -10,14 +10,14 @@ Build your own Wordle game by implementing the game logic in Python!
 3. Wait for the environment to load
 
 ### Option 2: Local Setup
-1. Make sure you have Python 3.11+ installed
-2. Install dependencies: `pip install -r requirements.txt`
+1. Make sure you have Python 3.11+ and [uv](https://docs.astral.sh/uv/) installed
+2. Install dependencies: `uv sync`
 
 ## Running the Game
 
 Start the server:
 ```bash
-python app.py
+uv run python app.py
 ```
 
 Then open your browser to: http://localhost:5000

@@ -1,7 +1,7 @@
 {
   "name": "Wordle",
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
-  "postCreateCommand": "pip install -r requirements.txt",
+  "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh && . $HOME/.local/bin/env && uv sync",
   "customizations": {
     "vscode": {
       "settings": {
@@ -9,8 +9,11 @@
           "*": false
         },
         "github.copilot.editor.enableAutoCompletions": false,
+        "github.copilot.chat.enabled": false,
+
         "python.analysis.autoImportCompletions": false,
         "python.analysis.completeFunctionParens": true,
+
         "editor.fontSize": 14,
         "editor.lineNumbers": "on",
         "editor.wordWrap": "on",
@@ -21,9 +24,34 @@
         "editor.insertSpaces": true,
         "editor.minimap.enabled": false,
         "editor.inlineSuggest.enabled": false,
+        "editor.quickSuggestions": {
+          "other": false,
+          "comments": false,
+          "strings": false
+        },
+        "editor.suggestOnTriggerCharacters": false,
+        "editor.acceptSuggestionOnCommitCharacter": false,
+        "editor.wordBasedSuggestions": "off",
+
         "files.autoSave": "afterDelay",
         "files.autoSaveDelay": 1000,
-        "terminal.integrated.cwd": "${workspaceFolder}"
+        "terminal.integrated.cwd": "${workspaceFolder}",
+
+        "files.exclude": {
+          "**/__pycache__": true,
+          "**/.pytest_cache": true,
+          ".devcontainer": true,
+          ".gitignore": true,
+          ".venv": true,
+          "*.code-workspace": true,
+          "app.py": true,
+          "pyproject.toml": true,
+          "static": true,
+          "templates": true,
+          "uv.lock": true,
+          "words": true,
+          "words.py": true
+        }
       },
       "extensions": [
         "ms-python.python"

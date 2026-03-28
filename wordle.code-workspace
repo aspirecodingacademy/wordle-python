@@ -6,6 +6,8 @@
     },
     "github.copilot.editor.enableAutoCompletions": false,
     "github.copilot.chat.enabled": false,
+    "chat.commandCenter.enabled": false,
+    "chat.editor.enabled": false,
 
     "python.analysis.autoImportCompletions": false,
     "python.analysis.completeFunctionParens": true,
@@ -41,6 +43,8 @@
       "*.code-workspace": true,
       "app.py": true,
       "pyproject.toml": true,
+      "solutions": true,
+      "RULES.md": true,
       "static": true,
       "templates": true,
       "uv.lock": true,

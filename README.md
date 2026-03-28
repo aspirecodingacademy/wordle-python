@@ -20,27 +20,45 @@ Start the server:
 uv run python app.py
 ```
 
-Then open your browser to: http://localhost:5000
+Then click the URL that appears
+
+## Game Rules
+
+Guess the secret 5-letter word in 6 tries!
+
+After each guess, tiles change color:
+- 🟩 **Green** = Correct letter in the correct spot
+- 🟨 **Yellow** = Correct letter but wrong spot
+- ⬛ **Gray** = Letter not in the word
 
 ## Your Task
 
-Edit `game.py` to implement these functions:
+Edit `game.py` to implement these four functions:
 
-### 1. `is_five_letters(guess)`
+### 1. `is_five_letters(guess)` - Easy
 Check if the guess has exactly 5 letters.
+- Return `True` if it does, `False` otherwise
 
-### 2. `is_valid_word(guess, valid_words)`
+### 2. `is_valid_word(guess, valid_words)` - Easy
 Check if the guess is a real word in our word list.
+- Return `True` if the word is valid, `False` otherwise
 
 ### 3. `check_guess(guess, secret_word)`
-Compare the guess to the secret word and return feedback:
-- `"correct"` = right letter, right position (green)
-- `"misplaced"` = right letter, wrong position (yellow)
-- `"wrong"` = letter not in word (gray)
+Compare the guess to the secret word and return feedback.
+- Return a list of 5 strings: `"correct"`, `"misplaced"`, or `"wrong"`
+- Loop through each letter and check: right position? in the word? or not at all?
 
-### 4. `is_winner(guess, secret_word)`
-Check if the player won (guess matches secret word).
+### 4. `is_winner(guess, secret_word)` - Easy
+Check if the player won (guess matches secret word exactly).
+- Return `True` if they match, `False` otherwise
 
 ## Testing Your Code
 
-After making changes to `game.py`, refresh your browser to test. The game will show you visual feedback based on your functions!
+1. Save your changes to `game.py`
+2. Refresh your browser to see the results
+3. Try these test cases:
+   - Type a 3-letter word → Should say "Not enough letters"
+   - Type "zzzzz" → Should say "Not in word list"
+   - Type a valid word → Should show colored feedback
+
+Good luck! 🎯

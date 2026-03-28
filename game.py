@@ -21,7 +21,6 @@ def is_five_letters(guess):
         is_five_letters("toolong") -> False
     """
     # TODO: Fix this function!
-    # Right now it always returns True
     return True
 
 
@@ -41,7 +40,6 @@ def is_valid_word(guess, valid_words):
         "apple" in valid_words  -> True or False
     """
     # TODO: Fix this function!
-    # Right now it accepts ANY guess, even fake words like "zzzzz"
     return True
 
 
@@ -64,10 +62,8 @@ def check_guess(guess, secret_word):
     Examples:
         check_guess("crane", "crane") -> ["correct", "correct", "correct", "correct", "correct"]
         check_guess("brain", "crane") -> ["wrong", "correct", "correct", "wrong", "correct"]
-        check_guess("apple", "peace") -> ["misplaced", "misplaced", "wrong", "wrong", "correct"]
     """
     # TODO: Fix this function!
-    # Right now it marks everything as "wrong" (gray)
     return ["wrong", "wrong", "wrong", "wrong", "wrong"]
 
 
@@ -89,5 +85,4 @@ def is_winner(guess, secret_word):
         is_winner("brain", "crane") -> False
     """
     # TODO: Fix this function!
-    # Right now you can never win
     return False

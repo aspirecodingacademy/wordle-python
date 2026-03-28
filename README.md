@@ -2,21 +2,11 @@
 
 Build your own Wordle game by implementing the game logic in Python!
 
-## Getting Started
-
-### Option 1: GitHub Codespaces (Recommended)
-1. Click the green "Code" button on GitHub
-2. Select "Open with Codespaces"
-3. Wait for the environment to load
-
-### Option 2: Local Setup
-1. Make sure you have Python 3.11+ and [uv](https://docs.astral.sh/uv/) installed
-2. Install dependencies: `uv sync`
-
 ## Running the Game
 
 Start the server:
-```bash
+
+```
 uv run python app.py
 ```
 
@@ -27,6 +17,7 @@ Then click the URL that appears
 Guess the secret 5-letter word in 6 tries!
 
 After each guess, tiles change color:
+
 - 🟩 **Green** = Correct letter in the correct spot
 - 🟨 **Yellow** = Correct letter but wrong spot
 - ⬛ **Gray** = Letter not in the word
@@ -36,20 +27,28 @@ After each guess, tiles change color:
 Edit `game.py` to implement these four functions:
 
 ### 1. `is_five_letters(guess)` - Easy
+
 Check if the guess has exactly 5 letters.
+
 - Return `True` if it does, `False` otherwise
 
 ### 2. `is_valid_word(guess, valid_words)` - Easy
+
 Check if the guess is a real word in our word list.
+
 - Return `True` if the word is valid, `False` otherwise
 
 ### 3. `check_guess(guess, secret_word)`
+
 Compare the guess to the secret word and return feedback.
+
 - Return a list of 5 strings: `"correct"`, `"misplaced"`, or `"wrong"`
 - Loop through each letter and check: right position? in the word? or not at all?
 
 ### 4. `is_winner(guess, secret_word)` - Easy
+
 Check if the player won (guess matches secret word exactly).
+
 - Return `True` if they match, `False` otherwise
 
 ## Testing Your Code

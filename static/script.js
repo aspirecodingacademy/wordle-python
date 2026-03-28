@@ -132,12 +132,6 @@ function deleteLetter() {
  * Submit the current guess
  */
 async function submitGuess() {
-    if (currentCol !== 5) {
-        showMessage('Not enough letters', 'error');
-        shakeRow();
-        return;
-    }
-
     const row = board.children[currentRow];
     let guess = '';
     for (let i = 0; i < 5; i++) {
@@ -160,7 +154,7 @@ async function submitGuess() {
         }
 
         if (!data.valid) {
-            showMessage('Not in word list', 'error');
+            showMessage(data.error || 'Invalid guess', 'error');
             shakeRow();
             return;
         }
